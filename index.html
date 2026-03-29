@@ -1,18 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gift List</title>
+    <title>Minha Lista de Presentes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #1abc9c;
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 1.8;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .gifts-section {
+            margin-top: 30px;
+        }
+
+        .gifts-section h2 {
+            color: #1abc9c;
+            font-size: 22px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .gift-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .gift-item {
+            background: #f0fdf9;
+            border-left: 4px solid #1abc9c;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+
+        .gift-item:hover {
+            background: #1abc9c;
+            color: white;
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(26, 188, 156, 0.3);
+        }
+
+        .gift-icon {
+            font-size: 24px;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .gift-text {
+            flex: 1;
+        }
+
+        .gift-text strong {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .gift-text small {
+            opacity: 0.7;
+            font-size: 12px;
+        }
+
+        .gift-item:hover .gift-text small {
+            opacity: 1;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
+            color: #666;
+            font-size: 13px;
+        }
+
+        .footer p {
+            line-height: 1.6;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .message {
+                font-size: 14px;
+            }
+
+            .gift-item {
+                padding: 12px 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Gift List</h1>
-    <ul>
-        <li>Toys</li>
-        <li>Books</li>
-        <li>Clothes</li>
-        <li>Gift Cards</li>
-        <li>Electronics</li>
-    </ul>
-</body>
-</html>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 Minha Lista de Presentes 🎉</h1>
+            <div class="message">
+                ✨ Mas acima de qualquer presente, é MUITO mais importante você que é meu/minha amigo/a e família estar lá para comemorar esse dia comigo. Vocês são as pessoas que mais amo e que me ajudaram a ser quem eu sou! ✨
+            </div>
+        </div>
+
+        <div class="gifts-section">
+            <h2>🎁 Presentes que gostaria:</h2>
+            <div class="gift-list">
+                <div class="gift-item" onclick="window.open('https://www.betoorigens.com.br/produtos/', '_blank')">
+                    <span class="gift-icon">☕</span>
+                    <div class="gift-text">
+                        <strong>Cafés do Beto</strong>
+                        <small>https://www.betoorigens.com.br/produtos/</small>
+                    </div>
+                </div>
+
+                <div class="gift-item">
+                    <span class="gift-icon">📚</span>
+                    <div class="gift-text">
+                        <strong>Manga de One Piece</strong>
+                        <small>A partir do número 12 em diante</small>
+                    </div>
+                </div>
+
+                <div class="gift-item">
+                    <span class="gift-icon">🌱</span>
+                    <div class="gift-text">
+                        <strong>Planta de Paz e Amor</strong>
+                        <small>Para trazer boas energias</small>
+                    </div>
+                </div>
+
+                <div class="gift-item" onclick="window.open('https://shopee.com.br/Bonecos-Colecion%C3%A1veis-One-Piece-Monkey-D-Luffy-Zoro-Namy-Portugas-D-Ace-Trafalgar-Law-COM-E-SEM-Caixa-Personalizada-i.1187354647.58253223859?extraParams=%7B%22display_model_id%22%3A129839107077%2C%22model_selection_logic%22%3A3%7D&sp_atk=ff1f1993-8850-4720-8448-081b856eb01a&xptdk=ff1f1993-8850-4720-8448-081b856eb01a', '_blank')">
+                    <span class="gift-icon">🎀</span>
+                    <div class="gift-text">
+                        <strong>Bonequinhos de One Piece</strong>
+                        <small>Colecionáveis - Shopee</small>
+                    </div>
+                </div>
+
+                <div class="gift-item" onclick="window.open('https://www.amazon.com.br/Cosplay-Desenho-Meninos-Dourada-Vermelho/dp/B0DS6M45PY/ref=sr_1_3_sspa?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=XW6E049FLCH1&dib=eyJ2IjoiMSJ9.uH5-sQF7rjqnYRTgxwWhzVCqp_aETyZw5jQN7LBCDmGQ6Km4yD5QpVgqfSYU9RnsDpbH1WN8GedsN5Cjq0V5riRowv7XCcwzZEm318ldHFsRnuRo2WrrYnSdxxMxKmdEgfd_mT5y2LlU6uFo3eEO9XzlybXkl1XHcSqELmADbyMA5Uu1XmJ2vlsf6Xkb6br2tmnqoxVs5930d6OiSgo4tB3vSRyI1U3H7c2ip-MChRGf_rsyFIXsQrnM6TPs4MO7Idu75cb7j-3x8f1SQ0riKlEfHdwL8H88i8jP7ZyYZfY.fwXb4jeF7tMQ1G-pVcAVbG_QCFV4_JW9wo0BJPhXE00&dib_tag=se&keywords=ONE+PIECE&qid=1774819120&sprefix=one+piece%2Caps%2C278&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1', '_blank')">
+                    <span class="gift-icon">👕</span>
+                    <div class="gift-text">
+                        <strong>Cosplay One Piece</strong>
+                        <small>Amazon - Diversos estilos</small>
+                    </div>
+                </div>
+
+                <div class="gift-item" onclick="window.open('https://www.amazon.com.br/One-Piece-Receitas-Piratas-01/dp/6525922615/ref=sr_1_12?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2DQA8AH1SLMAV&dib=eyJ2IjoiMSJ9.uH5-sQF7rjqnYRTgxwWhzVCqp_aETyZw5jQN7LBCDmGQ6Km4yD5QpVgqfSYU9RnsDpbH1WN8GedsN5Cjq0V5riRowv7XCcwzZEm318ldHFsRnuRo2WrrYnSdxxMxKmdEgfd_mT5y2LlU6uFo3eEO9XzlybXkl1XHcSqELmADbyMA5Uu1XmJ2vlsf6Xkb6br2tmnqoxVs5930d6OiSgo4tB3vSRyI1U3H7c2ip-MChRGf_rsyFIXsQrnM6TPs4MO7Idu75cb7j-3x8f1SQ0riKlEfHdwL8H88i8jP7ZyYZfY.fwXb4jeF7tMQ1G-pVcAVbG_QCFV4_JW9wo0BJPhXE00&dib_tag=se&keywords=ONE+PIECE&qid=1774819148&sprefix=one+piece%2Caps%2C202&sr=8-12', '_blank')">
+                    <span class="gift-icon">📖</span>
+                    <div class="gift-text">
+                        <strong>Livro de Receitas do Sanji</strong>
+                        <small>Amazon - Edição especial</small>
+                    </div>
+                </div>
+
+                <div class="gift-item" onclick="window.open('https://shopee.com.br/Lou%C3%A7a-Decorativa-Em-Porcelana-Rick-And-Morty-Colecion%C3%A1vel-i.1161614622.58203875306?extraParams=%7B%22display_model_id%22%3A149551734878%2C%22model_selection_logic%22%3A3%7D&sp_atk=d55d8fb2-b1ad-41e5-9191-de7c05ce31c0&xptdk=d55d8fb2-b1ad-41e5-9191-de7c05ce31c0', '_blank')">
+                    <span class="gift-icon">🔫</span>
+                    <div class="gift-text">
+                        <strong>Rick e Morty - Louça Decorativa</strong>
+                        <small>Shopee - Porcelana colecionável</small>
+                    </div>
+                </div>
+
+                <div class="gift-item" onclick="window.open('https://shopee.com.br/Rick-and-Morty-Total-Rickall-(Edicao-Revisada)-MECA-i.1057967953.23397308972?extraParams=%7B%22display_model_id%22%3A179706378185%2C%22model_selection_logic%22%3A3%7D&sp_atk=9350f582-06bc-4e30-be87-e46d62d29c9e&xptdk=9350f582-06bc-4e30-be87-e46d62d29c9e', '_blank')">
+                    <span class="gift-icon">🎲</span>
+                    <div class="gift-text">
+                        <strong>Rick and Morty - Total Rickall</strong>
+                        <small>Shopee - Jogo de tabuleiro</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer*
